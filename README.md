@@ -12,6 +12,17 @@ NodeJs, Express &amp; MongoDB Bootcamp notes.
 
 ### Section 2: Introduction to Node.js and NPM
 
++ Node.js => a js runtime built on googles open source v8 js engine.
++ so we can run our code outside of browser.
++ v8 engine run the code.
++ so we can access to file sytem with nodejs.
+
+=> so it is perfect to use Node.js as a web server
+=> meaning: we can finally use js on the server side of the web development in order to build fast highly scalable network applications.
+
+**pros**
++ 
+
 ## Part 2: How Node Works
 
 ### Section 3: Introduction to Back-End Web Development
