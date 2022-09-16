@@ -37,6 +37,12 @@ NodeJs, Express &amp; MongoDB Bootcamp notes.
 **not good for**
 + apps with super heavy server side processing, file compression etc => for these php, python, rails
 
+**Notes:**
++ you can use ES6 or older, any JS will work.Because we dont run js on browser, but on server. We running it inside node app.
++ write node on terminal, it starts node, when you hit tab it shows u all global variables.
++ "_" it means your previous result!
++ String. + tab => shows u all related methods/constructors and so on
+
 ## Part 2: How Node Works
 
 ### Section 3: Introduction to Back-End Web Development
