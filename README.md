@@ -21,7 +21,21 @@ NodeJs, Express &amp; MongoDB Bootcamp notes.
 => meaning: we can finally use js on the server side of the web development in order to build fast highly scalable network applications.
 
 **pros**
-+ 
++ single threaded, event driven, non blocking
++ perfect for building fast and scalable data intensive apps
++ many good companies use node.js (netflix, uber, paypal)
++ same language full stack - so it is fast and efficient
++ huge library of open source packages (NPM)
++ very active developer community
+
+**use for**
++ API with databasem(preferably NoSQL)
++ data streaming
++ real time chat app
++ server side web apps
+
+**not good for**
++ apps with super heavy server side processing, file compression etc => for these php, python, rails
 
 ## Part 2: How Node Works
 
