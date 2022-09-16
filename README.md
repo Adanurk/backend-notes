@@ -15,7 +15,7 @@ NodeJs, Express &amp; MongoDB Bootcamp notes.
 + Node.js => a js runtime built on googles open source v8 js engine.
 + so we can run our code outside of browser.
 + v8 engine run the code.
-+ so we can access to file sytem with nodejs.
++ so we can access to file sytem with nodejs. We couldnt do that on browser.
 
 => so it is perfect to use Node.js as a web server
 => meaning: we can finally use js on the server side of the web development in order to build fast highly scalable network applications.
@@ -42,6 +42,30 @@ NodeJs, Express &amp; MongoDB Bootcamp notes.
 + write node on terminal, it starts node, when you hit tab it shows u all global variables.
 + "_" it means your previous result!
 + String. + tab => shows u all related methods/constructors and so on
+
+**Modules**
++ all kinds of additional functionality are stored in module.
++ reading files ability is inside fs module.
+```JavaScript
+const fs = require("fs");
+```
++ so we get address to functions related with file system
++ we call it with require and it returns an object with functions
++ and we stored this object into fs variable
++ so we can use it later
+
+[Node Documentation](https://nodejs.org/en/docs/)
+
+```JavaScript
+const textIn = fs.readFileSync("./txt/input.txt", "utf-8");
+//syncronous way of file reading there is also async version
+//two arguments => path to file, and second one character encoding(usually utf-8)
+console.log(textIn);
+
+fs.writeFileSync("./txt/output.txt", textOut);
+//first argument is path, second one the thing we want to write
+```
+
 
 ## Part 2: How Node Works
 
