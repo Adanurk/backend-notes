@@ -149,6 +149,44 @@ const server = http.createServer((req, res) => {
 });
  ```
  
+ **API**
+ 
+ + a service from which you can request some data.
+ + JSON is a very simple text format similar to JS format.
+ + using dirname variable is better practice instead of using . (dot) for the current directory in the paths inside methods.
+ + because usually . (dot) means where your script is working and __dir means where the current file is located.
+ ```JavaScript
+ else if(pathName === "/api"){
+        fs.readFile(`${__dirname}/dev-data/data.json`, ...)
+        res.end("API");
+ ```
+ + one exception about meaning / usage of dot is : require function! 
+ + JSON.parse() => parse() The JSON. parse() method parses a JSON string, constructing the JavaScript value or object described by the string. Parses into an object.
+ + sync / top-level code only executes once but async code / callback will executed each time there is a request!
+ + it is important to understand which code will executed once in the beginning and which one will executed again and again.
+ ```JavaScript
+ const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, "utf-8");
+const dataObj = JSON.parse(data);
+//parses this into an object
+
+const server = http.createServer((req, res) => {
+    const pathName =  req.url;
+    if(pathName === "/" || pathName === "/overview"){
+        res.end("This is the overview");
+    }else if(pathName === "/product"){
+        res.end("This is the product");
+    }else if(pathName === "/api"){
+            res.writeHead(200, {"Content-type": "application/json"});
+            res.end(data);
+    }else{
+        res.writeHead(404, {
+            "Content-type" : "text/html",
+            "my-own-header":"hello-world"
+        });
+        res.end("<h1>Page not found</h1>")
+    }
+});
+```
  
 
 ## Part 2: How Node Works
