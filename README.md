@@ -97,7 +97,59 @@ fs.readFile("input.txt", "utf-8", (err, data) => {
  **Creating a simple web server**
  
  + we need another package calles http. IT gives us networking capability.
+ 
+ 
+```JavaScript
+const server = http.createServer((req, res) => {
+    // console.log(req);
+    res.end("Hello from the server!")
+});
+// server is the result ot createSERver method
+// createServer takes a callback function, will be fired each time a request to a server,
+//this callback has access to fundamental variables, request and response variable.
+//each time the server gets request, this response will be called,
+//these two are objects, inside we have useful tools to deal with request and response
+//.end is the simplest way to send a simple response
 
+server.listen(8000, "127.0.0.1", () => {
+    console.log("Listening to requests on port 8000");
+})
+
+//local host simply means the current computer, "127.0.0.1" is the standard IP address for it.
+//due to event loop, it(server that we created) doesnt exits from app, 
+//because the whole goal is the waiting for requests, this is the point about server
+//when we write http://127.0.0.1:8000/ to the browser we see the response from server
+ ```
+ 
+ **Routing**
+ 
+ + host/port/urlname
+ + implementing different actions for different url => routing
+ + for routing we need "url" modul.
+ ```JavaScript
+ const url = require("url");
+ ```
+ + browser automatically request for websites icon (fav icon)
+ + http header => is  a piece of info we are sending back from server
+ + we can use it to send some metadata for errors:
+  ```JavaScript
+const server = http.createServer((req, res) => {
+    const pathName =  req.url;
+    if(pathName === "/" || pathName === "/overview"){
+        res.end("This is the overview")
+    }else if(pathName === "/product"){
+        res.end("This is the product")
+    }else{
+        res.writeHead(404, {
+            "Content-type" : "text/html",
+            "my-own-header":"hello-world"
+        });
+        res.end("<h1>Page not found</h1>")
+    }
+});
+ ```
+ 
+ 
 
 ## Part 2: How Node Works
 
