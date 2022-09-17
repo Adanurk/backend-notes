@@ -91,8 +91,12 @@ fs.readFile("input.txt", "utf-8", (err, data) => {
  + callbacks are not automatically async!
  + the problem is callback hell! nested callbacks can be very confusing. this triangular shape is a sign that you are in a callback hell.
  + how can we escape callback hell? => using promises or async / await (more elegant way)
-
-
+ 
+ **note**: arrow function doesnt have its own this keyword, uses the parents this keyword / lexical scope we call it. normal function has its own scope, own this keyword.
+ 
+ **Creating a simple web server**
+ 
+ + we need another package calles http. IT gives us networking capability.
 
 
 ## Part 2: How Node Works
