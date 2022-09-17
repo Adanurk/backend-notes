@@ -65,6 +65,34 @@ console.log(textIn);
 fs.writeFileSync("./txt/output.txt", textOut);
 //first argument is path, second one the thing we want to write
 ```
+**sync - async code**
+
++ processing one by one, each one waits the result of previous one
++ so it is blocking code
++ this is a problem
++ as solution used async nonblocking codes
++ in async, we have a callback funtion to handle the result when the process is done
++ so the codes are not blocked by the heavy tasks run in the background
+
+```JavaScript
+const fs = require("fs");
+fs.readFile("input.txt", "utf-8", (err, data) => {
+  console.log(data);
+ });
+ console.log("Reading file...");
+ //first it sees readFile, it is async code, so while it is processes in the background it goes down and prints reading file and then data.
+ + here the third argument our function takes is a callback to process result when it is ready.
+ ```
+ + single thread: there is only one signle thread. the thread is where our code actually executed in machines processor. All the users using same thread.
+ + always same place for all users. So one user need to wait others to go on.
+ + so async code we use for dealing with heavy work in the background! Time consuming tasks should be executed here.
+ + non blocking I/O model => input output
+ + this is why we use so many callback functions in Node.js / for example in php it is very different concept!
+ + callbacks are not automatically async!
+ + the problem is callback hell! nested callbacks can be very confusing. this triangular shape is a sign that you are in a callback hell.
+ + how can we escape callback hell? => using promises or async / await (more elegant way)
+
+
 
 
 ## Part 2: How Node Works
