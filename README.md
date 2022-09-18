@@ -187,6 +187,13 @@ const server = http.createServer((req, res) => {
     }
 });
 ```
+
++ use reqular expressions instead of quotes here, because it only replaces first one if you use quotes. but regular expressions with /g replaces all.
+```JavaScript
+const replaceTemplate = (temp, product) => {
+    let output = temp.replace(/{%PRODUCTNAME}/g, product.productName)
+}
+```
  
 
 ## Part 2: How Node Works
