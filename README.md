@@ -155,6 +155,8 @@ const server = http.createServer((req, res) => {
  + JSON is a very simple text format similar to JS format.
  + using dirname variable is better practice instead of using . (dot) for the current directory in the paths inside methods.
  + because usually . (dot) means where your script is working and __dir means where the current file is located.
+ => __dirname is path of the directory that contains current file ( the file inside which you are writing __dirname)
+ => ./ refers to the path of directory where terminal is opened.
  ```JavaScript
  else if(pathName === "/api"){
         fs.readFile(`${__dirname}/dev-data/data.json`, ...)
@@ -194,6 +196,8 @@ const replaceTemplate = (temp, product) => {
     let output = temp.replace(/{%PRODUCTNAME}/g, product.productName)
 }
 ```
+
+**difference between import and require:** The major difference between require and import, is that require will automatically scan node_modules to find modules, but import, which comes from ES6, won't.
  
 
 ## Part 2: How Node Works
