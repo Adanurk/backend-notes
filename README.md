@@ -198,6 +198,8 @@ const replaceTemplate = (temp, product) => {
 ```
 
 **difference between import and require:** The major difference between require and import, is that require will automatically scan node_modules to find modules, but import, which comes from ES6, won't.
+
+![foto1](./img/import-vs-require.png)
  
 
 ## Part 2: How Node Works
