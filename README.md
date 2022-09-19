@@ -197,10 +197,56 @@ const replaceTemplate = (temp, product) => {
 }
 ```
 
-**difference between import and require:** The major difference between require and import, is that require will automatically scan node_modules to find modules, but import, which comes from ES6, won't.
+**difference between import and require:** You can't selectively load only the pieces you need with require but with import, you can selectively load only the pieces you need, which can save memory. But thanks to last updates we can use destructuring with require. So we can select the pieces we want.
+
+Another major difference is you can use require anywhere in the program where as import should always be at the top of file.
+
+Loading is synchronous(step by step) for require on the other hand import can be asynchronous(without waiting for previous import) so it can perform a little better than require.
 
 ![foto1](./img/import-vs-require.png)
- 
+
+** Node.js process.argv Property:**
+The process.argv property is an inbuilt application programming interface of the process module which is used to get the arguments passed to the node.js process when run in the command line.
+Syntax: process.argv
+Return Value: This property returns an array containing the arguments passed to the process when run it in the command line. The first element is the process execution path and the second element is the path for the js file.
+
+```JavaScript
+//command line 
+node index.js extra_argument1 extra_argument2 3
+
+//output
+number of arguments is 5
+0: C:\Program Files\nodejs\node.exe
+1: C:\nodejs\g\process\argv_2.js
+2: extra_argument1
+3: extra_argument2
+4: 3
+```
+
+** difference between import & require **
+There are two mainly used module system syntaxs.
+1. CommonJS
+2. ES6 module syntax
+Nodejs uses commonJS module syntax by default...
+const express = require("express")
+But it can support es6 module systax as well by just adding type property in package json and set value of type to module.
+ES6 syntax
+Import express from "express"
+The functionality will keep the same ,difference is only syntax
+Browser supports ES6 module systax only.
+Import sum from "./sum.js"
+And you can import only what you need.
+ES6 syntax:
+```JavaScript
+Import {NavLink} from "react-router-dom"
+```
+CommonJS syntax:
+```JavaScript
+const { exec} = require("child-process")
+```
+The major difference in commonjs and ES module is of synchronous and asynchronous nature>> -commonjs modules are synchronous, this is'nt an issue in case of small module execution but in case of large modules it can be delay to process. while, -loading and parsing of ES modules is asynchronous, this is the difference where may be the performance gets vary.
+Nowadays all new modules built on Es6 module.
+
 
 ## Part 2: How Node Works
 
