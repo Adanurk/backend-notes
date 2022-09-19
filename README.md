@@ -205,6 +205,13 @@ Loading is synchronous(step by step) for require on the other hand import can be
 
 ![foto1](./img/import-vs-require.png)
 
+[named export vs default export](https://medium.com/@etherealm/named-export-vs-default-export-in-es6-affb483a0910)
+
+"
+Named exports are useful to export several values. During the import, one will be able to use the same name to refer to the corresponding value.
+Concerning the default export, there is only a single default export per module. A default export can be a function, a class, an object or anything else. This value is to be considered as the “main” exported value since it will be the simplest to import.
+"
+
 **Node.js process.argv Property:**
 The process.argv property is an inbuilt application programming interface of the process module which is used to get the arguments passed to the node.js process when run in the command line.
 Syntax: process.argv
