@@ -205,7 +205,7 @@ Loading is synchronous(step by step) for require on the other hand import can be
 
 ![foto1](./img/import-vs-require.png)
 
-** Node.js process.argv Property:**
+**Node.js process.argv Property:**
 The process.argv property is an inbuilt application programming interface of the process module which is used to get the arguments passed to the node.js process when run in the command line.
 Syntax: process.argv
 Return Value: This property returns an array containing the arguments passed to the process when run it in the command line. The first element is the process execution path and the second element is the path for the js file.
@@ -223,7 +223,7 @@ number of arguments is 5
 4: 3
 ```
 
-** difference between import & require **
+**difference between import & require**
 There are two mainly used module system syntaxs.
 1. CommonJS
 2. ES6 module syntax
