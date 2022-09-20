@@ -309,6 +309,18 @@ npm update slugify => it updates the package according to our preferences (symbo
 + TCP => transmission control protocol, IP internet protocol
 + HTTP => hypertext transffer protocol
 
+![how-web-works-img](./img/how-web-works.png)
+
+**Frontend and Backend**:
++ Front-End => browser side
++ Back-Emd => server side
++ Web Server => a basic server is a computer that is connected to internet. Which stores files of a websites (html, css,js), runs an http server that is capable understanding urls request and delivering responses. So using requests qnd responses it communicates the browser. This is called a static server. For simple websites all you need is this. But for more complex websites like connecting to database and so on, we use a servser which is also capable of running our dynamic applications. This is called Dynamic server. And also we need a database for dynamic websites. To store user data etc. Backend communicates with this database.
++ so inside web server => http server + app + files
+
+![front-back-end-img](./img/front-back-end.png)
+
+
+
 ### Section 3: Introduction to Back-End Web Development
 
 ### Section 4: How Node.js Works: A Look Behind the Scenes
