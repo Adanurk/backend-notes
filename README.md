@@ -319,9 +319,51 @@ npm update slugify => it updates the package according to our preferences (symbo
 
 ![front-back-end-img](./img/front-back-end.png)
 
+**static websites vs dynamic websites**
++ no work on backend in static websites.
++ dynamic websites are different then static ones, because they usually built on a servser each time when you request sth.
++ connection between database in dynamic websites.
++ there is a servser side rendering process in dynamic websites. (for example twitter)
++ web applications usually mean dynamic websites.
 
+![static-vs-dynamic](./img/static-vs-dynamic.png)
+
+**dynamic websites vs api-powered websites**
++ in API we have database + an app that gets data each time when there is a request. With API we only send the data not entire website to the browser. Usually in JSON data format. No html, css only JSON.
++ Application Programming Interface = API
++ serverside rendered = dynamic websites, they actually built on server
++ client side rendered = api powered websites
++ node is perfect tool to built api
+
+![dynamic-api](./img/dynamic-and-api-websites.png)
+
++ one API many consumers!
 
 ### Section 3: Introduction to Back-End Web Development
+
+**Node.JS Architecture**
+
++ node dependencies=> node is a js runtime based on googles v8 engine
++ v8 js engine => without v8 node cant undertsnd js codes, v8 converts js codes into machine codes that a computer actually can understand.
++ libuv => open source library with focus on async io. It gives node access to underlying computer op system, file system, networking and more. Also implements two important features of nodejs: event loop (executing simple tasks) and thread pool (heavy work like file access and compression). 
++ Libuv is completely written in C++ language and v8 in C++ and js. Thats why node itself is written in C++ & JS not only JS.
++ http-parser(parsing http), c-ares(dns request stuff), OpenSSL(cryptography), zlib(for compression) these are other dependencies.
+
+**Node process and threads**
++ Node.Js Process => is a program in execution on a computer. Node starts the process when its running. In node we have access to process variable.
++ in that process node.js run in a single thread(sequence of instructions). Node runs in a single thread, which makes it easy node apps. No matter how many users you have, it will be run in single thread.
++ event loop is where most of the work is done.
++ but for the heavy tasks that can block, there is thread pool. additional 4 or more additional threads it gives us. So event loop offloads heavy tasks to this thread pool. these tasks are like: file system APIs, Cryptography, sompression, DNS lookups.
+
++ Event loop => all the application code that is inside callback functions(non-top-level code) run in event loop.
++ Node.js is build around callback functions.
++ Because node has an event driven architecture.(events emitted, event loop picks them up, associated callbacks are called)
++ Event loop does orchestration.
++ event loop makes a syncrounous coding possible in node.js! This makes node.js completely different from others.
+
+![event-loop](event-loop.png)
+
+
 
 ### Section 4: How Node.js Works: A Look Behind the Scenes
 
