@@ -254,55 +254,6 @@ const { exec} = require("child-process")
 The major difference in commonjs and ES module is of synchronous and asynchronous nature>> -commonjs modules are synchronous, this is'nt an issue in case of small module execution but in case of large modules it can be delay to process. while, -loading and parsing of ES modules is asynchronous, this is the difference where may be the performance gets vary.
 Nowadays all new modules built on Es6 module.
 
-**NPM:** is a command line interface app, that automatically comes with installed node.js; we use to install and manage open source packages. Both app and repository is npm.
-
-[express](https://www.npmjs.com/package/express) => node framework
-
-npm init =>  creates a package.json file, project related data inside;
-name => package name
-version => version of project
-description and so on, it asks project related questions
-if you dont want to answer all, you can write "npm init -y"
-
-+ there are two types of packages we can install: simple/regular dependencies or development dependencies(debugging tool, webpack...).
-
-npm install slugify (it installs this package as regular dependency)
-npm install nodemon --save-dev (it installs this package as development dependency) // or -D for --save-dev and -g for --global
-so we install these to our local => inside node_modules file
-
-we can also have global installs, inside whole maachine
-for example we can install and use nodemon as global dependency:
-npm i nodemon --global => installs nodemon globally
-(if you work on Mac, you need to add sudo in the beginning of command)
-
-+ for executing locally installed dependencies we need script.
-```JavaScript
- "scripts": {
-    "start": "nodemon index.js"
-  },
- ```
- npm (run) start (terminal command)
- 
-+ usually we install development dependencies globally, regular ones locally!
-
-+ versions: 1.18.11 => major-version.minor-version.patch-version; patch version is for bug fixing. minor version introduces some new features but not includes a breaking change. It doesnt break our code. Major version is a huge new release and it can have breaking changes, our code might not work.
-
-+ updates: small icons in front of version number is related with our permissions for updates: ^ this symbol specifies which updates we accept for packages, this means we accept all releases and updates minor and patch also. ~ this symbol means only accept pacth releases. * means all of the versions. Even the ones with huge changes. Usually as default we use ^ this one.
-
-npm outdated => this command show us all outdated packages!
-npm install slugify@1.0.0 => we install the specific version of slugify paackage
-npm update slugify => it updates the package according to our preferences (symbol in front of version number)
-
-+ deletes: npm uninstall package-name
-
-+ package-lock.json file => detailed info about packages.
-
-[adding packages to npm](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)
-
-=> prettier: auto format - on; .prettierrc file; {"singleQuote": true, "printWidth":80 (default)}
-
-## Part 2: How Node Works
-
 **How web works**:
 + browser(client) send request, server send response.This is request-response model.
 + DNS => domain name server, dns convert domain name into real ip address of server.#
@@ -310,6 +261,10 @@ npm update slugify => it updates the package according to our preferences (symbo
 + HTTP => hypertext transffer protocol
 
 ![how-web-works-img](./img/how-web-works.png)
+
+## Part 2: How Node Works
+
+### Section 3: Introduction to Back-End Web Development
 
 **Frontend and Backend**:
 + Front-End => browser side
@@ -339,7 +294,8 @@ npm update slugify => it updates the package according to our preferences (symbo
 
 + one API many consumers!
 
-### Section 3: Introduction to Back-End Web Development
+
+### Section 4: How Node.js Works: A Look Behind the Scenes
 
 **Node.JS Architecture**
 
@@ -361,11 +317,15 @@ npm update slugify => it updates the package according to our preferences (symbo
 + Event loop does orchestration.
 + event loop makes a syncrounous coding possible in node.js! This makes node.js completely different from others.
 
-![event-loop](event-loop.png)
+![event-loop](./img/event-loop.png)
 
+**guidelines not to block:**
++ dont use versions of functions in fs, crypto and ylib modules in callback functions.
++ dont perform complex calculations, like loops inside loops.
++ be careful with JSON in large objects
++ dont use too complex regular expressions(e.g. nested qualifiers)
 
-
-### Section 4: How Node.js Works: A Look Behind the Scenes
++ server is an instance of EventEmitter class
 
 ## Optional Part
 
