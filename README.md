@@ -303,6 +303,12 @@ npm update slugify => it updates the package according to our preferences (symbo
 
 ## Part 2: How Node Works
 
+**How web works**:
++ browser(client) send request, server send response.This is request-response model.
++ DNS => domain name server, dns convert domain name into real ip address of server.#
++ TCP => transmission control protocol, IP internet protocol
++ HTTP => hypertext transffer protocol
+
 ### Section 3: Introduction to Back-End Web Development
 
 ### Section 4: How Node.js Works: A Look Behind the Scenes
