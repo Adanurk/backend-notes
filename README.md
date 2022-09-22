@@ -327,6 +327,12 @@ Nowadays all new modules built on Es6 module.
 
 + server is an instance of EventEmitter class
 
+**Streams**
+readable, writable, duplex, transform streams in node.js
++ streams are instances of EventEmitter class actually.
+
+![streams](./img/node-streams.png)
+
 ## Optional Part
 
 ### Section 5: Asynchronous JavaScript: Promises and Async/Await
