@@ -333,6 +333,9 @@ readable, writable, duplex, transform streams in node.js
 
 ![streams](./img/node-streams.png)
 
+**requiring modules**
+
+
 ## Optional Part
 
 ### Section 5: Asynchronous JavaScript: Promises and Async/Await
