@@ -359,6 +359,8 @@ module.exports is returned object!! (exports of module are stored in module.expo
 if you will export only one variable, then you use module.exports = Calculator
 if you have multiple named variables, use exports.add = ...
 
+**NOTE for my question**: When you export that module, all code runs in that exported module and also all exported members are available in the module that requires your exported module. console.log("Hello from the module") is a method invocation and it runs automatically if its module is required no matter if there are no exported members and console.log("Hello from the module") sits there alone. console.log("Hello from the module") is a side-effect of that exported module, so it affects the console object - calls its method log which logs to the console (again, if required anywhere).
+
 ## Optional Part
 
 ### Section 5: Asynchronous JavaScript: Promises and Async/Await
