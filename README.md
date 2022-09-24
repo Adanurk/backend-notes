@@ -334,7 +334,30 @@ readable, writable, duplex, transform streams in node.js
 ![streams](./img/node-streams.png)
 
 **requiring modules**
++ in commonjs module system:
+=> each js file treated as a seperate module
+=> require(), exports or module.exports
 
++ ES6 module syste:
+=> used in browsers; import / exporrt
+
+cache => önbellek, hizli bellek, saklamak
+
+=> with require, we can receive three different type of modules:
++ core modules: require("http")
++ developer modules: require("./lin/controller") (starts with dot or dots)
++3rd party modules: require("express") they are inside node_modules folder
+it tries to import index.js modules inside
+
++ whre this require function comes from? => nodejs runtime takes our require code put it inside a function expression, inside this function:
+exports, require, module, __filename, __dirname objects are put as arguments. This function is called as wrapper functions. So these are basically global variables of each module! Since it is created for each module, each module has its own global scope!
+
+![requiring](./img/requiring.png)
+
+require functions returnds exports of the required module.
+module.exports is returned object!! (exports of module are stored in module.exports object)
+if you will export only one variable, then you use module.exports = Calculator
+if you have multiple named variables, use exports.add = ...
 
 ## Optional Part
 
