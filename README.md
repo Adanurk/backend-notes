@@ -384,6 +384,17 @@ const imgs = all.map(el => el.body.message);
 
 ### Section 6: Express: Starting Building the Natours API
 
++ to build node apps, we use express or similar. It makes development easier and faster. IT makes easier to write node codes.
++ It is a minimal node.js framework, a higher level of abstraction.
++ 100% node.js code 
++ contains useful features, complex routing, easier handling of requesta and responses, middleware, server-side-rendering etc
++ MVC architecture pattern is easier to apply with express
+
+**Postman**
++ a tool to allow us to API testing
++ similar to browser, but doesnt render html etc
++ but takes request and gives response
+
 ### Section 7: Introduction to MongoDB
 
 ### Section 8: Mongoose
