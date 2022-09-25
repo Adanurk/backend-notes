@@ -366,6 +366,11 @@ When you require a module, you automatically run all the code inside of it.
 
 ### Section 5: Asynchronous JavaScript: Promises and Async/Await
 
++ async await + try catch
++ get.then.catch
+
+if throw(err) => whole promise is rejected
+
 ## Part 3: "Natours" API
 
 ### Section 6: Express: Starting Building the Natours API
