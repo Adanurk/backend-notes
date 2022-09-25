@@ -371,6 +371,15 @@ When you require a module, you automatically run all the code inside of it.
 
 if throw(err) => whole promise is rejected
 
+if we dont use await when assigning async function to a variable, then we assign only promise not the result value!
++ if we want to get multiple promises simultaneously, then we assign them without await and at the end we say
+
+```JavaScript
+const all = await Promise.all([promise1, promise2, promise3]);
+console.log(all); => it includes many info, but we need for each body.message values so we use map;
+const imgs = all.map(el => el.body.message);
+```
+
 ## Part 3: "Natours" API
 
 ### Section 6: Express: Starting Building the Natours API
