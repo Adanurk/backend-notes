@@ -395,6 +395,21 @@ const imgs = all.map(el => el.body.message);
 + similar to browser, but doesnt render html etc
 + but takes request and gives response
 
+**API**: Application programming interface. A piece of software that can be used by another piece of software, in order to allow applications to talk to each other.
+example: not only web api browsers dom js api
+
+**REST Architecture**: restful apis.
+
+![res](./img/rest.png)
+
+Http methods => post, get, put, patch, delete
+CRUD ops => Create, Read, Update, Delete
+
++ JSON response formatting => Jsend (adding status)
++ Stateless RESTful API: all state is handled on the client! This means that each request must contain all info necessary to process a certain request. The server should nt have to remember previous requests.
+
+
+
 ### Section 7: Introduction to MongoDB
 
 ### Section 8: Mongoose
