@@ -422,6 +422,10 @@ CRUD ops => Create, Read, Update, Delete
 
 ![res](./img/req-res-cycle.png)
 
+**middleware**
++ use method is for using middleware, to add a middleware to middleware stack
++ app.use();
++ 
 
 
 ### Section 7: Introduction to MongoDB
