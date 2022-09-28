@@ -408,6 +408,20 @@ CRUD ops => Create, Read, Update, Delete
 + JSON response formatting => Jsend (adding status)
 + Stateless RESTful API: all state is handled on the client! This means that each request must contain all info necessary to process a certain request. The server should nt have to remember previous requests.
 
+**request response cycle**
++ essence of express development is understanding this cycle.
++ express app receives a request when someone hits a server, for which it will then create a res and req object. That data then will  be used and processed in order to generate or to send back a meaningful response.
++ in order to process that data we use sth called middleware, which can manipulate request or response object or really execute any other code that we like. So it doesnt have to be always about response or request.
++ but moslty it is about request.
++ it is in the middle between receiving a request and sending response.
++ even defining routes functions are middleware functions, they are middleware functions only for special routes.
++ parsing body, logging, settting headers, routing... these are some examples of middleware usage
++ middleware stack
++ the order of middlewares in middleware stack must be same with the order in our code!
++ next()
+
+![res](./img/req-res-cycle.png)
+
 
 
 ### Section 7: Introduction to MongoDB
