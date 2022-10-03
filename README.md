@@ -428,8 +428,25 @@ CRUD ops => Create, Read, Update, Delete
 
 => each router is kind of a mini sub-application, one for each resource.
 
+=> env variables we use for configuration.
+
 
 ### Section 7: Introduction to MongoDB
+
+=> MongoDB is a NoSQL database. Nonrelational. collections(tables), documents(rows) => each document has one entity like post, user, review.
+=> MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need.
+
++ Document based: stores data in documents (field-value pair data structures, NoSQL)
++ Scalable: very easy to distribute data accross multiple machines as your users and amount of data grows.
++ flexible: No document data schema required, so each document can have different number and type of fields.
++ performant: embedded data models, indexing, sharding, flexible documents, native duplication, etc.
++ free and open-source, published under the sspl license.
+
+=> BSON: Data format MongoDB uses for data storage. Like JSON but typed. So MongoDB documents are typed.
+=> Embedding/Denormalizing: Including related data into a single document. This allows for quicker access and easier data models.
+
+=> maximum size for BSON documents is 16 megabytes.
+=> each document  has a unique id which acts as a primary key of document.
 
 ### Section 8: Mongoose
 
