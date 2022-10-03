@@ -425,7 +425,8 @@ CRUD ops => Create, Read, Update, Delete
 **middleware**
 + use method is for using middleware, to add a middleware to middleware stack
 + app.use();
-+ 
+
+=> each router is kind of a mini sub-application, one for each resource.
 
 
 ### Section 7: Introduction to MongoDB
