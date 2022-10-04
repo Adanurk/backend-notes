@@ -451,6 +451,13 @@ CRUD ops => Create, Read, Update, Delete
 **MongoDB Sehll(mongosh)**
 + The MongoDB Shell, mongosh, is a fully functional JavaScript and Node.js 16.x REPL environment for interacting with MongoDB deployments. You can use the MongoDB Shell to test queries and operations directly with your database.
 
+**CRUD Operations**
+CRUD operations create, read, update, and delete documents.
+
+for the CRUD operations => [click here](https://www.mongodb.com/developer/products/mongodb/cheat-sheet/)
+                    
+                    
+
 ### Section 8: Mongoose
 
 ### Section 9: Error Handling with Express
