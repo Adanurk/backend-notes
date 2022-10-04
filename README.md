@@ -448,6 +448,9 @@ CRUD ops => Create, Read, Update, Delete
 => maximum size for BSON documents is 16 megabytes.
 => each document  has a unique id which acts as a primary key of document.
 
+**MongoDB Sehll(mongosh)**
++ The MongoDB Shell, mongosh, is a fully functional JavaScript and Node.js 16.x REPL environment for interacting with MongoDB deployments. You can use the MongoDB Shell to test queries and operations directly with your database.
+
 ### Section 8: Mongoose
 
 ### Section 9: Error Handling with Express
