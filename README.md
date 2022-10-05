@@ -20,6 +20,11 @@ NodeJs, Express &amp; MongoDB Bootcamp notes.
 => so it is perfect to use Node.js as a web server
 => meaning: we can finally use js on the server side of the web development in order to build fast highly scalable network applications.
 
+**Node.js's role in web development**
++ run server => create server & listen to incoming requests, not only codes for server , server itself we built with nodejs
++ business logic => handle requests, validate inputs, connect to database
++ responses => return responses (rendered HTML, JSON...)
+
 **pros**
 + single threaded, event driven, non blocking
 + perfect for building fast and scalable data intensive apps
