@@ -4,6 +4,10 @@ NodeJs, Express &amp; MongoDB Bootcamp notes.
 
 ## Part 1: Node.JS Basics
 
+- route => a section of code that associates an HTTP verb(GET, POST, PUT, DELETE), an URL path/pattern, and a function which is called to handle that pattern.
+
+- routing => refers to how an applications' endpoints(URLs) respond to client requests. (app.get(), app.post()...)
+
 ### Section 1: Introduction
 
 - code along
