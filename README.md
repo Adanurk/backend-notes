@@ -21,6 +21,12 @@ NodeJs, Express &amp; MongoDB Bootcamp notes.
 => so it is perfect to use Node.js as a web server
 => meaning: we can finally use js on the server side of the web development in order to build fast highly scalable network applications.
 
+**Node.js's role in web development**
+
+- run server => create server & listen to incoming requests, not only codes for server , server itself we built with nodejs
+- business logic => handle requests, validate inputs, connect to database
+- responses => return responses (rendered HTML, JSON...)
+
 **pros**
 
 - single threaded, event driven, non blocking
@@ -458,11 +464,73 @@ CRUD ops => Create, Read, Update, Delete
 
 - use method is for using middleware, to add a middleware to middleware stack
 - app.use();
+
+=> each router is kind of a mini sub-application, one for each resource.
+
+=> env variables we use for configuration.
+
+### Section 7: Introduction to MongoDB
+
+### Section 8: Mongoose
+
+### Section 9: Error Handling with Express
+
+### Section 10: Authentication, Authorization and Security
+
+### Section 11: Modelling Data and Advanced Mongoose
+
+## Part 4: "Natours" Site
+
+### Section 12: Server-Side Rendering with Pug Templates
+
+### Section 13: Advanced Features: Payments, Email, File Uploads
+
+### Section 14: Setting Up Git and Deployment
+
+### Last Notes
+
+# <<<<<<< HEAD
+
+- use method is for using middleware, to add a middleware to middleware stack
+- app.use();
+
+=> each router is kind of a mini sub-application, one for each resource.
+
+=> env variables we use for configuration.
+
+> > > > > > > b9c265709461540a5035ac4a3baa14fa6281c90f
+
+- use method is for using middleware, to add a middleware to middleware stack
+- app.use();
 -
 
 => CORS: https://www.section.io/engineering-education/how-to-use-cors-in-nodejs-with-express/#:~:text=CORS%20stands%20for%20Cross%2DOrigin,origins%20can%20access%20the%20API.
 
 ### Section 7: Introduction to MongoDB
+
+=> MongoDB is a NoSQL database. Nonrelational. collections(tables), documents(rows) => each document has one entity like post, user, review.
+=> MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need.
+
+- Document based: stores data in documents (field-value pair data structures, NoSQL)
+- Scalable: very easy to distribute data accross multiple machines as your users and amount of data grows.
+- flexible: No document data schema required, so each document can have different number and type of fields.
+- performant: embedded data models, indexing, sharding, flexible documents, native duplication, etc.
+- free and open-source, published under the sspl license.
+
+=> BSON: Data format MongoDB uses for data storage. Like JSON but typed. So MongoDB documents are typed.
+=> Embedding/Denormalizing: Including related data into a single document. This allows for quicker access and easier data models.
+
+=> maximum size for BSON documents is 16 megabytes.
+=> each document has a unique id which acts as a primary key of document.
+
+**MongoDB Sehll(mongosh)**
+
+- The MongoDB Shell, mongosh, is a fully functional JavaScript and Node.js 16.x REPL environment for interacting with MongoDB deployments. You can use the MongoDB Shell to test queries and operations directly with your database.
+
+**CRUD Operations**
+CRUD operations create, read, update, and delete documents.
+
+for the CRUD operations => [click here](https://www.mongodb.com/developer/products/mongodb/cheat-sheet/)
 
 ### Section 8: Mongoose
 
