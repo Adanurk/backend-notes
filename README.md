@@ -498,11 +498,8 @@ CRUD ops => Create, Read, Update, Delete
 
 => env variables we use for configuration.
 
-> > > > > > > b9c265709461540a5035ac4a3baa14fa6281c90f
-
 - use method is for using middleware, to add a middleware to middleware stack
 - app.use();
--
 
 => CORS: https://www.section.io/engineering-education/how-to-use-cors-in-nodejs-with-express/#:~:text=CORS%20stands%20for%20Cross%2DOrigin,origins%20can%20access%20the%20API.
 
