@@ -493,8 +493,6 @@ CRUD ops => Create, Read, Update, Delete
 
 ### Last Notes
 
-# <<<<<<< HEAD
-
 - use method is for using middleware, to add a middleware to middleware stack
 - app.use();
 
@@ -547,6 +545,21 @@ for the CRUD operations => [click here](https://www.mongodb.com/developer/produc
 
 => Mongoose model: a wrapper for the schema, providing an interface to the database for CRUD operations.
 
+**Into to backend architecture: MVC, Types of logic, and more**
+
++ MVC => Model view controller, this is a backend acrhitecture. Implemented in different ways.
+=> application logic (controller, to handle apps request interact with models and sending responses to clients), business logic(model), presentation logic(view, graphical interface, consists of template to create view of website)
++ in ordder to write modular applications we need this type of architecture.
+
+![res](./img/MVC.png)
+
+**model vs controller => application vs. business logic** 
+=> application logic: all the code that is only concerned about the applications implementation, not the underlying business problem we're trying to solve(ep: showing and selling tours or managing stocks in supermarket etc). It is more about technical aspects. It is bridge between model and view layers)
+=> business logic: code that actually solves the business problem we set out to solve; directly related to business rules, how the business works, and business needs; (examples: creating new tours in db, checking if users passwordd is correct, validating user input data etc).
++ it is sometimes not possible to completely seperate them but we need to try always to keep seperata, application logic will be in controllers and business logic will be in models.
+
+=> Fat models/thin controllers: offload as much as logic as possible into the models, and keep the controllers as simple and lean as possible.
+"modellere mümkün olduğunca fazla mantık yükleyin ve denetleyicileri olabildiğince basit ve yalın tutun."
 
 
 ### Section 9: Error Handling with Express
