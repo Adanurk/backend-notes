@@ -533,7 +533,21 @@ CRUD operations create, read, update, and delete documents.
 
 for the CRUD operations => [click here](https://www.mongodb.com/developer/products/mongodb/cheat-sheet/)
 
-### Section 8: Mongoose
+### Section 8: Using MongoDB with Mongoose
+
++ Mongoose is an Object Data Modelling (ODM) library for MongoDB and Node.j, a higher level of abstraction.
++ like relation between nodejs and express => mongodb & mongoose.
++ express is a layer of abstraction over regular nodeJS, mongoose is a layer of abstraction over regular mongoDB driver.
++ ODM is only just a way to interact with database by writing JS codes.
++ mongooose gives us more functionality, faster and simlier
++ schemas to model data and relationships, easy data validation, simple query api, etc
+
+=> Mongoose schema: where we model our data, by describing the structure of the data, default values, and validation.
++ then we take this schema and create models.
+
+=> Mongoose model: a wrapper for the schema, providing an interface to the database for CRUD operations.
+
+
 
 ### Section 9: Error Handling with Express
 
