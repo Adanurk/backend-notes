@@ -8,6 +8,26 @@ NodeJs, Express &amp; MongoDB Bootcamp notes.
 
 - routing => refers to how an applications' endpoints(URLs) respond to client requests. (app.get(), app.post()...)
 
+### Global Features vs Core Modules vs Third-Party Modules
+
+Global features: Keywords like const or function but also some global objects like process
+
+Core Node.js Modules: Examples would be the file-system module ("fs"), the path module ("path") or the Http module ("http")
+
+Third-party Modules: Installed via npm install - you can add any kind of feature to your app via this way
+
+Global features are always available, you don't need to import them into the files where you want to use them.
+
+Core Node.js Modules don't need to be installed (NO npm install is required) but you need to import them when you want to use features exposed by them.
+
+Example:
+
+const fs = require('fs');
+
+You can now use the fs object exported by the "fs" module.
+
+Third-party Modules need to be installed (via npm install in the project folder) AND imported.
+
 ### Section 1: Introduction
 
 - code along
@@ -533,34 +553,35 @@ for the CRUD operations => [click here](https://www.mongodb.com/developer/produc
 
 ### Section 8: Using MongoDB with Mongoose
 
-+ Mongoose is an Object Data Modelling (ODM) library for MongoDB and Node.j, a higher level of abstraction.
-+ like relation between nodejs and express => mongodb & mongoose.
-+ express is a layer of abstraction over regular nodeJS, mongoose is a layer of abstraction over regular mongoDB driver.
-+ ODM is only just a way to interact with database by writing JS codes.
-+ mongooose gives us more functionality, faster and simlier
-+ schemas to model data and relationships, easy data validation, simple query api, etc
+- Mongoose is an Object Data Modelling (ODM) library for MongoDB and Node.j, a higher level of abstraction.
+- like relation between nodejs and express => mongodb & mongoose.
+- express is a layer of abstraction over regular nodeJS, mongoose is a layer of abstraction over regular mongoDB driver.
+- ODM is only just a way to interact with database by writing JS codes.
+- mongooose gives us more functionality, faster and simlier
+- schemas to model data and relationships, easy data validation, simple query api, etc
 
 => Mongoose schema: where we model our data, by describing the structure of the data, default values, and validation.
-+ then we take this schema and create models.
+
+- then we take this schema and create models.
 
 => Mongoose model: a wrapper for the schema, providing an interface to the database for CRUD operations.
 
 **Into to backend architecture: MVC, Types of logic, and more**
 
-+ MVC => Model view controller, this is a backend acrhitecture. Implemented in different ways.
-=> application logic (controller, to handle apps request interact with models and sending responses to clients), business logic(model), presentation logic(view, graphical interface, consists of template to create view of website)
-+ in ordder to write modular applications we need this type of architecture.
+- MVC => Model view controller, this is a backend acrhitecture. Implemented in different ways.
+  => application logic (controller, to handle apps request interact with models and sending responses to clients), business logic(model), presentation logic(view, graphical interface, consists of template to create view of website)
+- in ordder to write modular applications we need this type of architecture.
 
 ![res](./img/MVC.png)
 
-**model vs controller => application vs. business logic** 
+**model vs controller => application vs. business logic**
 => application logic: all the code that is only concerned about the applications implementation, not the underlying business problem we're trying to solve(ep: showing and selling tours or managing stocks in supermarket etc). It is more about technical aspects. It is bridge between model and view layers)
 => business logic: code that actually solves the business problem we set out to solve; directly related to business rules, how the business works, and business needs; (examples: creating new tours in db, checking if users passwordd is correct, validating user input data etc).
-+ it is sometimes not possible to completely seperate them but we need to try always to keep seperata, application logic will be in controllers and business logic will be in models.
+
+- it is sometimes not possible to completely seperate them but we need to try always to keep seperata, application logic will be in controllers and business logic will be in models.
 
 => Fat models/thin controllers: offload as much as logic as possible into the models, and keep the controllers as simple and lean as possible.
 "modellere mümkün olduğunca fazla mantık yükleyin ve denetleyicileri olabildiğince basit ve yalın tutun."
-
 
 ### Section 9: Error Handling with Express
 
