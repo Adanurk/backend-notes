@@ -587,6 +587,10 @@ for the CRUD operations => [click here](https://www.mongodb.com/developer/produc
 
 ### Section 10: Authentication, Authorization and Security
 
+**Security Best Practices and Suggestions**
+
+![res](./img/security-best-practices.png)
+
 ### Section 11: Modelling Data and Advanced Mongoose
 
 ## Part 4: "Natours" Site
