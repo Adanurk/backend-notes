@@ -593,6 +593,8 @@ for the CRUD operations => [click here](https://www.mongodb.com/developer/produc
 
 ![res](./img/security-best-practices.png)
 
+**Cookie**: Basically a piece of text that a server can send to client. When client receives the cookie it will automatically stored and send back along with all requests to the same server. 
+
 ### Section 11: Modelling Data and Advanced Mongoose
 
 ## Part 4: "Natours" Site
