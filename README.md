@@ -587,6 +587,8 @@ for the CRUD operations => [click here](https://www.mongodb.com/developer/produc
 
 ### Section 10: Authentication, Authorization and Security
 
+![res](./img/howSigningworks.png)
+
 **Security Best Practices and Suggestions**
 
 ![res](./img/security-best-practices.png)
