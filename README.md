@@ -500,6 +500,25 @@ CRUD ops => Create, Read, Update, Delete
 
 => env variables we use for configuration.
 
+**Notes related with starting project**
+- it is a convention to have all configuration related with express in app.js file.
+- in app.js file we are creating our variable "app" which includes every functionality, methods,values of express.
+
+```JavaScript
+const app = express();
+
+app.get("/", (req,res)=> {
+res.status(200).send("Hello from server side!")});
+
+const port = process.env.PORT || 4000;
+app.listen(port, () => {
+console.log(App running...)
+});
+```
+- routing is basiclly determining how will application respond to certain client requests/certain url. So url + http method.
+- so client hit that url with that certain request. With routing we are giving responses for these.
+- res.send(), res.json(), res.status(), ...
+
 ### Section 7: Introduction to MongoDB
 
 ### Section 8: Mongoose
