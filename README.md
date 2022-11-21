@@ -1,6 +1,6 @@
 # Backend Notes
 
-NodeJs, Express &amp; MongoDB Bootcamp notes.
+NodeJs, Express &amp; MongoDB notes.
 
 ## Part 1: Node.JS Basics
 
@@ -313,6 +313,13 @@ Nowadays all new modules built on Es6 module.
 - HTTP => hypertext transffer protocol
 
 ![how-web-works-img](./img/how-web-works.png)
+
+=> header: info related with req/res, there are many info options available that you can send with header.
+=> request body: if we send data from user to server then it will be inside request body.
+=> http vs https: https is encrypted.
+=> both req and res contains start line, headers and body.
+=> in response start line: http version + status code + status message
+=> in request start line: http method + request target + http version
 
 ## Part 2: How Node Works
 
