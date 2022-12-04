@@ -602,3 +602,19 @@ for the CRUD operations => [click here](https://www.mongodb.com/developer/produc
 ### Section 14: Setting Up Git and Deployment
 
 ### Last Notes
+
+- Fullstack Application Overview:
+
+  - Data is kept in a database on a server.
+  - There is some kind of backend API.
+  - The API has routes that we can access from the client(React in our case) in order to CRUD data.
+  - Data is brought into state in React (if we are using context api, we are putting data into global state) and used in React app.
+
+- HTTP Methods: GET (retrieves data from server), POST (submit data to server), PUT/PATCH (update data already on server), DELETE (delete data from server).
+
+- HTTP Status Codes:
+  - 1xx: Informational, request received / processing (but no response yet)
+  - 2xx: Success, successfully received. (201 for forms mostly, sth is created)
+  - 3xx: Redirect, further actions must be taken. The request has more than one responses.
+  - 4xx: Client error, request doesnt have what it needs. (404 sth doesnt exist)
+  - 5xx: Server error, server failed to fulfill a valid request.
