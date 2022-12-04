@@ -1,6 +1,6 @@
 # Backend Notes
 
-NodeJs, Express &amp; MongoDB Bootcamp notes.
+NodeJs, Express &amp; MongoDB notes.
 
 ## Part 1: Node.JS Basics
 
@@ -314,6 +314,13 @@ Nowadays all new modules built on Es6 module.
 
 ![how-web-works-img](./img/how-web-works.png)
 
+=> header: info related with req/res, there are many info options available that you can send with header.
+=> request body: if we send data from user to server then it will be inside request body.
+=> http vs https: https is encrypted.
+=> both req and res contains start line, headers and body.
+=> in response start line: http version + status code + status message
+=> in request start line: http method + request target + http version
+
 ## Part 2: How Node Works
 
 ### Section 3: Introduction to Back-End Web Development
@@ -493,6 +500,25 @@ CRUD ops => Create, Read, Update, Delete
 
 => env variables we use for configuration.
 
+**Notes related with starting project**
+- it is a convention to have all configuration related with express in app.js file.
+- in app.js file we are creating our variable "app" which includes every functionality, methods,values of express.
+
+```JavaScript
+const app = express();
+
+app.get("/", (req,res)=> {
+res.status(200).send("Hello from server side!")});
+
+const port = process.env.PORT || 4000;
+app.listen(port, () => {
+console.log(App running...)
+});
+```
+- routing is basiclly determining how will application respond to certain client requests/certain url. So url + http method.
+- so client hit that url with that certain request. With routing we are giving responses for these.
+- res.send(), res.json(), res.status(), ...
+
 ### Section 7: Introduction to MongoDB
 
 ### Section 8: Mongoose
@@ -587,9 +613,13 @@ for the CRUD operations => [click here](https://www.mongodb.com/developer/produc
 
 ### Section 10: Authentication, Authorization and Security
 
+![res](./img/howSigningworks.png)
+
 **Security Best Practices and Suggestions**
 
 ![res](./img/security-best-practices.png)
+
+**Cookie**: Basically a piece of text that a server can send to client. When client receives the cookie it will automatically stored and send back along with all requests to the same server. 
 
 ### Section 11: Modelling Data and Advanced Mongoose
 
